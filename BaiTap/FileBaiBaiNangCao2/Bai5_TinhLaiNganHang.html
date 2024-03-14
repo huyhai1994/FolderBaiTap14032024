@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let p,r;
+    let n,i;
+    alert("Nhap tien von, lai suat, so nam: ");
+    p = +prompt("Tien von: ");
+    r = +prompt("lai xuat: ");
+    n = +prompt("so nam : ");
+    for (i=1; i<=n;i++){
+        console.log (i + " " + tinha(p,r,i));
+    }
+    function tinha(p, r, n){
+        return p * Math.pow((1+r),n);
+    }
+</script>
+</body>
+</html>

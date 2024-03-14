@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table, th, td {
+        border-collapse: collapse;
+        width: 300px;
+        color: pink;
+        height: 30px;
+    }
+
+    table.center {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<body>
+
+<script>
+    let row, col;
+    let HeartSymbol = " &&";
+    let StringOut = "<table class = 'center'' border='0' cellpadding='6' cellspacing='15'>";
+    StringOut = StringOut + "<th colspan='17' style='font-size: xxx-large'> 404 Love not found</th>";
+    for (row = 0; row <= 3; row++) {
+        StringOut = StringOut + "<tr>";
+        for (col = 1; col <= 17; col++) {
+            if ((col >= 3 - row && col <= 6 + row) || (col >= 12 - row && col <= 15 + row)) {
+                StringOut = StringOut + "<td>" + HeartSymbol + "</td>";
+            } else {
+                StringOut = StringOut + "<td>" + "  " + "</td>";
+            }
+        }
+        StringOut = StringOut + "</tr>";
+    }
+
+    for (row = 0; row < 9; row++) {
+        StringOut = StringOut + "<tr>";
+        for (col = 1; col <= 17; col++) {
+            if (col >= row + 1 && col <= 17 - row)
+                StringOut = StringOut + "<td>" + HeartSymbol + "</td>";
+            else
+                StringOut = StringOut + "<td>" + " " + "</td>";
+        }
+        StringOut = StringOut + "</tr>";
+    }
+    StringOut = StringOut + "</table>";
+    document.write(StringOut);
+</script>
+</body>
+</html>

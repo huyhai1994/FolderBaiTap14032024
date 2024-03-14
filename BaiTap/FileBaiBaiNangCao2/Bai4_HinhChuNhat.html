@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* Chữ nhật */
+    let col, row;
+    col = 21;
+    row = 7;
+    let StringOut = "<table class = 'center'>";
+    for (let i = 0; i <= row; i++) {
+        StringOut += "<tr>";
+        for (let j = 0; j <= col; j++) {
+            if (i === 0 || i === 7 || j === 0 || j === 21) {
+                StringOut += "<td>" + " * " + "</td>";
+            } else {
+                StringOut += "<td>" + "   " + "</td>";
+            }
+        }
+        StringOut += "</tr>";
+    }
+    StringOut += "</table>";
+    document.write(StringOut)
+</script>
+</body>
+</html>
